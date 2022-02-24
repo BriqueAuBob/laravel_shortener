@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Graphik';
+    src: local('Graphik Bold'), local('Graphik-Bold'),
+    url('../fonts/Graphik-Bold.woff2') format('woff2'),
+    url('../fonts/Graphik-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: local('Graphik Semibold'), local('Graphik-Semibold'),
+    url('../fonts/Graphik-Semibold.woff2') format('woff2'),
+    url('../fonts/Graphik-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-grid {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+@media (prefers-color-scheme: dark) {
+    .bg-grid {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    }
+}
