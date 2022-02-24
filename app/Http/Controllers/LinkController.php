@@ -30,7 +30,7 @@ class LinkController extends Controller
      * @param LinkRequest $request
      * @return Application|RedirectResponse|Redirector
      */
-    public function store(LinkRequest $request)
+    public function store(LinkRequest $request): Application|RedirectResponse|Redirector
     {
         if(str_starts_with($request?->destination_url, config('app.url'))) return redirect(route('links.index'));
 
@@ -46,7 +46,7 @@ class LinkController extends Controller
      * @param  \App\Models\Link $link
      * @return Application|RedirectResponse|Redirector
      */
-    public function show(Link $link)
+    public function show(Link $link): Application|RedirectResponse|Redirector
     {
         $link->click_count++;
         $link->save();
